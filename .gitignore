@@ -1,0 +1,45 @@
+# Ignore Godot editor cache
+.godot/
+
+# Ignore import metadata
+*.import
+
+# Ignore compiled scripts (GDScript)
+*.gd-remap
+
+# Ignore auto-generated files
+export_presets.cfg
+*.godot_export.cfg
+*.godot_import.json
+
+# Ignore Mono (C#) specific
+mono/
+*.mono
+.mono-config
+.mono-temp/
+data_*/
+mono_crash.*.json
+
+# Ignore debug & temporary files
+*.translation
+*.tmp
+*.log
+*.converted.*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE-specific (VSCode, JetBrains, etc.)
+.vscode/
+*.sln
+*.csproj
+*.pidb
+*.suo
+*.user
+*.unityproj
+*.aps
+*.sdf
+*.cache/
+.idea/
