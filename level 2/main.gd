@@ -43,7 +43,7 @@ func _on_score_timer_timeout():
 	score += 1
 	$HUD.update_score(score)
 
-	# Filip was here
+	# Filip was heren't
 func _on_mob_timer_timeout():
 	
 	# Create a new instance of the Mob scene.
