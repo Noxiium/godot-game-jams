@@ -35,7 +35,7 @@ animations = [{
 radius = 28.0
 height = 70.0
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="Area2D" groups=["player"]]
 position = Vector2(235, 295)
 rotation = -0.0214623
 script = ExtResource("1_cktsv")
