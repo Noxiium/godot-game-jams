@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://pmyrsd4x4igm"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_cktsv"]
+[ext_resource type="Script" path="res://level 2/player/player.gd" id="1_cktsv"]
 [ext_resource type="Texture2D" uid="uid://qitnxr36qujh" path="res://art/playerGrey_walk1.png" id="1_fga13"]
 [ext_resource type="Texture2D" uid="uid://csoxahv6fhgit" path="res://art/playerGrey_walk2.png" id="2_mhduu"]
 [ext_resource type="Texture2D" uid="uid://c0hdtixwpyh8x" path="res://art/playerGrey_up2.png" id="4_8jawc"]
@@ -36,7 +36,8 @@ radius = 28.0
 height = 70.0
 
 [node name="Player" type="Area2D"]
-position = Vector2(-3, 0)
+position = Vector2(235, 295)
+rotation = -0.0214623
 script = ExtResource("1_cktsv")
 metadata/_edit_group_ = true
 
@@ -47,5 +48,8 @@ animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_q8tmp")
+
+[node name="projectileMarker" type="Marker2D" parent="."]
+unique_name_in_owner = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

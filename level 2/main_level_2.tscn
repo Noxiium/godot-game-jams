@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=4 uid="uid://c5ck4of0a1fkp"]
 
-[ext_resource type="PackedScene" uid="uid://pmyrsd4x4igm" path="res://player.tscn" id="1_23ccp"]
-[ext_resource type="Script" path="res://main.gd" id="1_ehepv"]
-[ext_resource type="PackedScene" uid="uid://ddcrqyd41xacq" path="res://mob.tscn" id="2_jv6jm"]
-[ext_resource type="PackedScene" uid="uid://bquxpa52yrh1h" path="res://hud.tscn" id="4_djaf2"]
-[ext_resource type="AudioStream" uid="uid://bb4vnip74qa8n" path="res://art/mobspawnsound.mp3" id="5_2bd5r"]
-[ext_resource type="AudioStream" uid="uid://ch16k5xser8co" path="res://art/deadSound.mp3" id="6_tadwi"]
+[ext_resource type="Script" path="res://level 2/main.gd" id="1_fxsii"]
+[ext_resource type="PackedScene" uid="uid://ddcrqyd41xacq" path="res://level 2/mobs/mob.tscn" id="2_2fml0"]
+[ext_resource type="PackedScene" uid="uid://pmyrsd4x4igm" path="res://level 2/player/player.tscn" id="3_yj7vo"]
+[ext_resource type="PackedScene" uid="uid://bquxpa52yrh1h" path="res://hud.tscn" id="4_e8md6"]
+[ext_resource type="AudioStream" uid="uid://bb4vnip74qa8n" path="res://art/mobspawnsound.mp3" id="5_b3wt3"]
+[ext_resource type="AudioStream" uid="uid://ch16k5xser8co" path="res://art/deadSound.mp3" id="6_n7ycx"]
 
 [sub_resource type="Curve2D" id="Curve2D_qcr46"]
 _data = {
@@ -22,16 +22,16 @@ sampling_rate = 44100.0
 packet_sequence = SubResource("OggPacketSequence_h5kmf")
 loop = true
 
-[node name="Main" type="Node"]
-script = ExtResource("1_ehepv")
-mob_scene = ExtResource("2_jv6jm")
+[node name="main_level_2" type="Node"]
+script = ExtResource("1_fxsii")
+mob_scene = ExtResource("2_2fml0")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 488.0
 offset_bottom = 728.0
 color = Color(0.207843, 0.443137, 1, 1)
 
-[node name="Player" parent="." instance=ExtResource("1_23ccp")]
+[node name="Player" parent="." instance=ExtResource("3_yj7vo")]
 position = Vector2(240, 456)
 
 [node name="MobTimer" type="Timer" parent="."]
@@ -51,21 +51,21 @@ curve = SubResource("Curve2D_qcr46")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
 
-[node name="HUD" parent="." instance=ExtResource("4_djaf2")]
+[node name="HUD" parent="." instance=ExtResource("4_e8md6")]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamOggVorbis_g4he6")
 volume_db = -25.0
 
 [node name="MobSpawn" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_2bd5r")
+stream = ExtResource("5_b3wt3")
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_tadwi")
+stream = ExtResource("6_n7ycx")
 volume_db = -20.0
 
 [node name="MobSpawn2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_2bd5r")
+stream = ExtResource("5_b3wt3")
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

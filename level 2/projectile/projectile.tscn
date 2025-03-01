@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://gglyg8xbkbrf"]
+
+[ext_resource type="Script" path="res://level 2/projectile/projectile.gd" id="1_ujk26"]
+[ext_resource type="Texture2D" uid="uid://bowaubwrh587a" path="res://art/playerProjectile.png" id="1_x6r54"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b08rg"]
+radius = 11.0
+
+[node name="Projectile" type="Area2D"]
+top_level = true
+position = Vector2(213, 300)
+rotation = 6.33905
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_ujk26")
+
+[node name="PlayerProjectile" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+texture = ExtResource("1_x6r54")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_b08rg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
