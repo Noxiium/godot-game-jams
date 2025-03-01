@@ -1,13 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://df0x6i3o03a2k"]
+[gd_scene load_steps=10 format=3 uid="uid://v0sjcracscfo"]
 
 [ext_resource type="Texture2D" uid="uid://cs5yclf0ms4c6" path="res://art/enemyFlyingAlt_1.png" id="1_ff0p4"]
-[ext_resource type="Script" path="res://Level 1/mob.gd" id="1_hi8jv"]
+[ext_resource type="Script" path="res://level 2/mobs/mob.gd" id="1_hi8jv"]
 [ext_resource type="Texture2D" uid="uid://cq7g1b43uynru" path="res://art/enemyFlyingAlt_2.png" id="2_tsyi7"]
 [ext_resource type="Texture2D" uid="uid://swftngv8fwmd" path="res://art/enemySwimming_1.png" id="3_1fmqt"]
 [ext_resource type="Texture2D" uid="uid://cw5jcqtctifoc" path="res://art/enemySwimming_2.png" id="4_evhda"]
 [ext_resource type="Texture2D" uid="uid://cb6f2m4apy87b" path="res://art/enemyWalking_1.png" id="5_3pmsx"]
 [ext_resource type="Texture2D" uid="uid://di6e6eh0o1ctj" path="res://art/enemyWalking_2.png" id="6_ioets"]
-
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1yswk"]
 animations = [{
@@ -57,7 +56,7 @@ script = ExtResource("1_hi8jv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["mobs"]]
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_1yswk")
-animation = &"walk"
+animation = &"fly"
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
