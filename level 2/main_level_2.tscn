@@ -1,11 +1,12 @@
 [gd_scene load_steps=10 format=4 uid="uid://c5ck4of0a1fkp"]
 
-[ext_resource type="Script" path="res://level 2/level_2.gd" id="1_fxsii"]
+[ext_resource type="Script" path="res://level 2/main.gd" id="1_fxsii"]
 [ext_resource type="PackedScene" uid="uid://ddcrqyd41xacq" path="res://level 2/mobs/mob.tscn" id="2_2fml0"]
 [ext_resource type="PackedScene" uid="uid://pmyrsd4x4igm" path="res://level 2/player/player.tscn" id="3_yj7vo"]
 [ext_resource type="PackedScene" uid="uid://bquxpa52yrh1h" path="res://hud.tscn" id="4_e8md6"]
-[ext_resource type="AudioStream" uid="uid://bb4vnip74qa8n" path="res://art/mobspawnsound.mp3" id="5_b3wt3"]
-[ext_resource type="AudioStream" uid="uid://ch16k5xser8co" path="res://art/deadSound.mp3" id="6_n7ycx"]
+[ext_resource type="AudioStream" uid="uid://cq4hodxtlm41w" path="res://art/mobspawnsound.mp3" id="5_b3wt3"]
+[ext_resource type="AudioStream" uid="uid://du4r770nmuevw" path="res://art/deadSound.mp3" id="6_n7ycx"]
+
 
 [sub_resource type="Curve2D" id="Curve2D_qcr46"]
 _data = {
