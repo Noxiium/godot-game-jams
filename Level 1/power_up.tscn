@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://1gveby2p5qah"]
+
+[ext_resource type="Script" path="res://power_up.gd" id="1_pbi0n"]
+[ext_resource type="Texture2D" uid="uid://6cvpw1011qhn" path="res://Scrappy-doo-modified.png" id="2_n7tnw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gu1w2"]
+radius = 26.0192
+
+[node name="PowerUp" type="RigidBody2D"]
+mass = 0.001
+gravity_scale = 0.0
+script = ExtResource("1_pbi0n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.484)
+texture = ExtResource("2_n7tnw")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gu1w2")
+debug_color = Color(0.886275, 0.815686, 0.109804, 0.494118)
+metadata/_edit_group_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
